@@ -12,6 +12,7 @@ public class Sistema {
         System.out.println("7) Remover paciente");
         System.out.println("8) Remover médico");
         System.out.println("9) Remover enfermeiro");
+        System.out.println("10) Diagnosticar um paciente");
         System.out.println("0) Sair");
         System.out.print("Informe uma opção:");
 
@@ -192,6 +193,17 @@ public class Sistema {
                 {
                     System.out.println("\nEnfermeiro com CPF: " + cpf + " não localizado no cadastro");
                 }
+
+                break;
+                
+            case 10:
+                System.out.println("Digite o cpf do paciente que deseja diagnosticar: ");
+                String _cpf = Console.lerString();
+                
+                System.out.println("Digite o diagnóstico que deseja dar para o paciente: ");
+                String _diagnostico = Console.lerString();
+
+                Medico.diagnosticar(_cpf, _diagnostico);
 
                 break;
 

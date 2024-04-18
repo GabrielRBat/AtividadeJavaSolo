@@ -11,7 +11,7 @@ public class Medico extends Pessoa{
         this.especialidade = _especialidade;
     }
 
-    public void diagnosticar(String _cpf, String _diagnostico)
+    public static void diagnosticar(String _cpf, String _diagnostico)
     {
         List<Pessoa> pacientes = Hospital.getPacientes();
         for (Pessoa paciente : pacientes)
